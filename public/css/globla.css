@@ -1,0 +1,15 @@
+.navbar-end {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#nav-search {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+}
+
+#input-search {
+    width: 700px;
+}

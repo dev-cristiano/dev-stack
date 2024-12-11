@@ -1,3 +1,4 @@
-vlucas/phpdotenv
-illuminate/database
-autoload
+composer install vlucas/phpdotenv
+composer install illuminate/database
+composer install autoload
+npm install bulma

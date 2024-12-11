@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="pt-br" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+
+    <link rel="stylesheet" href="node_modules/bulma/css/bulma.min.css">
+    <link rel="stylesheet" href="./public/css/globla.css">
+
+
+    <script src="https://kit.fontawesome.com/50de02b3f7.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <nav class="navbar is-fullwidth" role="navigation" aria-label="main navigation">
+        <div class="container">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="#">
+                    <img src="/public/image/logo.png" alt="dev-stack" id="navbar-logo">
+                </a>
+
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
+                    data-target="navbarBasicExample">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+
+            <div class="navbar-menu">
+                <div class="navbar-start">
+                    <a class="navbar-item" href="#">
+                        Inicio
+                    </a>
+
+                    <a class="navbar-item" href="#">
+                        Comunidade
+                    </a>
+
+                    <a class="navbar-item" href="#">Ranking</a>
+                </div>
+
+                <div class="navbar-end">
+
+                    <!-- Input Search -->
+                    <form action="" id="nav-search">
+                        <div class="field has-addons">
+                            <div class="control">
+                                <input class="input" type="text" placeholder="Ex: @usuario">
+                            </div>
+                            <div class="control">
+                                <button class="button is-black">
+                                    Search
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                    <!-- End Input Search -->
+
+                    <div class="navbar-item">
+                        <div class="buttons">
+                            <!-- Login Button -->
+                            <button class="button is-black js-modal-trigger" data-target="modal-login">
+                                <span class="icon">
+                                    <i class="fa-solid fa-user"></i>
+                                </span>
+                                <span>Log In</span>
+                            </button>
+
+                            <!-- Register Button -->
+                            <button class="button js-modal-trigger" data-target="modal-register">
+                                <span class="icon">
+                                    <i class="fa-solid fa-right-to-bracket"></i>
+                                </span>
+                                <span>Registro</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <!-- Modal Login -->
+        <div id="modal-login" class="modal">
+            <div class="modal-background"></div>
+            <div class="modal-content">
+                <div class="box">
+                    <h3 class="title is-4">Log In</h3>
+                    <form>
+                        <div class="field">
+                            <p class="control has-icons-left has-icons-right">
+                                <input class="input" type="email" placeholder="Email">
+                                <span class="icon is-small is-left">
+                                    <i class="fas fa-envelope"></i>
+                                </span>
+                                <span class="icon is-small is-right">
+                                    <i class="fas fa-check"></i>
+                                </span>
+                            </p>
+                        </div>
+                        <div class="field">
+                            <p class="control has-icons-left">
+                                <input class="input" type="password" placeholder="Senha">
+                                <span class="icon is-small is-left">
+                                    <i class="fas fa-lock"></i>
+                                </span>
+                            </p>
+                        </div>
+                        <div class="field">
+                            <p class="control">
+                                <button class="button is-black">
+                                    Login
+                                </button>
+                            </p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <button class="modal-close is-large" aria-label="close"></button>
+        </div>
+
+        <!-- Modal Register -->
+        <div id="modal-register" class="modal">
+            <div class="modal-background"></div>
+            <div class="modal-content">
+                <div class="box">
+                    <h3 class="title is-4">Registro</h3>
+                    <form>
+
+                        <div class="field">
+                            <p class="control has-icons-left">
+                                <input class="input" type="text" placeholder="Nome">
+                                <span class="icon is-small is-left">
+                                    <i class="fas fa-user"></i>
+                                </span>
+                            </p>
+                        </div>
+                        <div class="field">
+                            <p class="control has-icons-left has-icons-right">
+                                <input class="input" type="email" placeholder="Email">
+                                <span class="icon is-small is-left">
+                                    <i class="fas fa-envelope"></i>
+                                </span>
+                                <span class="icon is-small is-right">
+                                    <i class="fas fa-check"></i>
+                                </span>
+                            </p>
+                        </div>
+                        <div class="field">
+                            <p class="control has-icons-left">
+                                <input class="input" type="tel" placeholder="Telefone">
+                                <span class="icon is-small is-left">
+                                    <i class="fas fa-phone"></i>
+                                </span>
+                            </p>
+                        </div>
+                        <div class="field">
+                            <p class="control has-icons-left">
+                                <input class="input" type="password" placeholder="Senha">
+                                <span class="icon is-small is-left">
+                                    <i class="fas fa-lock"></i>
+                                </span>
+                            </p>
+                        </div>
+                        <div class="field">
+                            <p class="control">
+                                <button class="button is-balck">
+                                    Registro
+                                </button>
+                            </p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <button class="modal-close is-large" aria-label="close"></button>
+        </div>
+
+    </div>
+
+    <div class="container mt-5">
+        <div class="columns">
+            <!-- Coluna da Esquerda -->
+            <div class="column is-one-fifth">
+                <aside class="menu">
+                    <p class="menu-label">General</p>
+                    <ul class="menu-list">
+                        <li><a>Dashboard</a></li>
+                        <li><a>Customers</a></li>
+                    </ul>
+                    <p class="menu-label">Administration</p>
+                    <ul class="menu-list">
+                        <li><a>Team Settings</a></li>
+                        <li>
+                            <a class="is-active">Manage Your Team</a>
+                            <ul>
+                                <li><a>Members</a></li>
+                                <li><a>Plugins</a></li>
+                                <li><a>Add a member</a></li>
+                            </ul>
+                        </li>
+                        <li><a>Invitations</a></li>
+                        <li><a>Cloud Storage Environment Settings</a></li>
+                        <li><a>Authentication</a></li>
+                    </ul>
+                    <p class="menu-label">Transactions</p>
+                    <ul class="menu-list">
+                        <li><a>Payments</a></li>
+                        <li><a>Transfers</a></li>
+                        <li><a>Balance</a></li>
+                    </ul>
+                </aside>
+            </div>
+
+            <!-- Coluna Central -->
+            <div class="column is-three-fifths">
+                <div class="is-full">
+                    <div class="form mb-5">
+                        <!-- Input Search -->
+                        <form action="" id="nav-search" class="mb-5">
+                            <div class="field has-addons">
+                                <div class="control">
+                                    <input class="input" id="input-search" type="text" placeholder="Exe: #Linguagem">
+                                </div>
+                                <div class="control">
+                                    <button class="button is-black">
+                                        Search
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                        <!-- End Input Search -->
+                    </div>
+
+
+                    <div class="card-content mt-5">
+                        <div class="card-content">
+                            
+                            <div class="card">
+                                <div class="card-content">
+                                    <p class="title">
+                                        “There are two hard things in computer science: cache invalidation, naming
+                                        things, and off-by-one errors.”
+                                    </p>
+                                    <p class="subtitle">Jeff Atwood</p>
+                                </div>
+                                <footer class="card-footer">
+                                    <p class="card-footer-item">
+                                        <span>
+                                            View on
+                                            <a
+                                                href="https://twitter.com/codinghorror/status/506010907021828096">Twitter</a>
+                                        </span>
+                                    </p>
+                                    <p class="card-footer-item">
+                                        <span> Share on <a href="#">Facebook</a> </span>
+                                    </p>
+                                </footer>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-content">
+                                    <p class="title">
+                                        “There are two hard things in computer science: cache invalidation, naming
+                                        things, and off-by-one errors.”
+                                    </p>
+                                    <p class="subtitle">Jeff Atwood</p>
+                                </div>
+                                <footer class="card-footer">
+                                    <p class="card-footer-item">
+                                        <span>
+                                            View on
+                                            <a
+                                                href="https://twitter.com/codinghorror/status/506010907021828096">Twitter</a>
+                                        </span>
+                                    </p>
+                                    <p class="card-footer-item">
+                                        <span> Share on <a href="#">Facebook</a> </span>
+                                    </p>
+                                </footer>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Coluna da Direita -->
+            <div class="column is-one-fifth">
+                <aside class="menu">
+                    <p class="menu-label">General</p>
+                    <ul class="menu-list">
+                        <li><a>Dashboard</a></li>
+                        <li><a>Customers</a></li>
+                    </ul>
+                    <p class="menu-label">Administration</p>
+                    <ul class="menu-list">
+                        <li><a>Team Settings</a></li>
+                        <li>
+                            <a class="is-active">Manage Your Team</a>
+                            <ul>
+                                <li><a>Members</a></li>
+                                <li><a>Plugins</a></li>
+                                <li><a>Add a member</a></li>
+                            </ul>
+                        </li>
+                        <li><a>Invitations</a></li>
+                        <li><a>Cloud Storage Environment Settings</a></li>
+                        <li><a>Authentication</a></li>
+                    </ul>
+                    <p class="menu-label">Transactions</p>
+                    <ul class="menu-list">
+                        <li><a>Payments</a></li>
+                        <li><a>Transfers</a></li>
+                        <li><a>Balance</a></li>
+                    </ul>
+                </aside>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="/public/js/navbar.js"></script>
+    <script src="/public/js/modal.js"></script>
+</body>
+
+</html>
